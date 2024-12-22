@@ -1,0 +1,607 @@
+{
+	"info": {
+		"_postman_id": "2b919a1d-0582-4ade-a1c0-659a0d782044",
+		"name": "Stock Management App API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40571192"
+	},
+	"item": [
+		{
+			"name": "Stores",
+			"item": [
+				{
+					"name": "Store Save",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiNTJiNzY4ZWRmZjcxOTg1MDk1ZDRmNzVjZWJiMDBkZGNkNWRlZWIyMGViMjliMzczMmYxNmY1MDljNWIwMTFmZDdlOGIyNjY3M2Q2ZmZjNmQiLCJpYXQiOjE3MzQ3NTg1NDAuODA4Mzc1LCJuYmYiOjE3MzQ3NTg1NDAuODA4MzkxLCJleHAiOjE3NjYyOTQ1NDAuODAwMDQ5LCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.BhYLzbbZE-uA41tvf8l8Wsvq0AeF-RqYrM2ekQl8vSbMvDta63SjUoC2O5LOy73EchgFCQlni834a8exNwmYDXww1F8VAy4p11PIjzM1Fr8bQDhgDDFSgHqpwTT5oDyPm_HQXERo9tKUZ3nIn_mot2bUzVqLiOTBU_kKIUk-V6KloSksmEHYFSN17kHNIz-mnXdqQOpQi6h9IkB4-tQDoD4Zhd0FWuXmO55dxyElHGAW8qyk82Zm8wx12zxarIJNRMCqmjIiJDyxS8-aZQwXqKktyW0lpDg4hONQhQZClCl5lM4MwAzvCSt6ZA9njstzLl9THNad0KkoYuLdKbQXuJtjS_-I-Xd39ZbJhWZUylcRvwHso9qwesyOFWnGkcZazAc6emN-nQF4rwIc02PWQs0KQx2-sdFLwcSnSaW-mNktNfA1TSOX6K8p9RoWN1lGxjYZS1MtLLp7tmOfsrwgbm-eNJr75YWoK7AmIFwfwe7I3Odktvp3c0BtP1tzSel-6rpN7tbZU2v3f1XNPv2kcx6fymQ0DD4o1LsDDeykX1TJCmv75ZDGDui955UsvcbelGFRTm63CdM7p21RrbJUnTf2rUyEBn7I97_wli6Xe8ok81QXT8iT0ZPPS5GkLGh50vkJpnhYTPeECG2YH-qdIYaOKWgSbSS9RwvB6s1rHpc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "store_name",
+									"value": "Store 9",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/stock-management-app/public/api/stores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"stock-management-app",
+								"public",
+								"api",
+								"stores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiNTJiNzY4ZWRmZjcxOTg1MDk1ZDRmNzVjZWJiMDBkZGNkNWRlZWIyMGViMjliMzczMmYxNmY1MDljNWIwMTFmZDdlOGIyNjY3M2Q2ZmZjNmQiLCJpYXQiOjE3MzQ3NTg1NDAuODA4Mzc1LCJuYmYiOjE3MzQ3NTg1NDAuODA4MzkxLCJleHAiOjE3NjYyOTQ1NDAuODAwMDQ5LCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.BhYLzbbZE-uA41tvf8l8Wsvq0AeF-RqYrM2ekQl8vSbMvDta63SjUoC2O5LOy73EchgFCQlni834a8exNwmYDXww1F8VAy4p11PIjzM1Fr8bQDhgDDFSgHqpwTT5oDyPm_HQXERo9tKUZ3nIn_mot2bUzVqLiOTBU_kKIUk-V6KloSksmEHYFSN17kHNIz-mnXdqQOpQi6h9IkB4-tQDoD4Zhd0FWuXmO55dxyElHGAW8qyk82Zm8wx12zxarIJNRMCqmjIiJDyxS8-aZQwXqKktyW0lpDg4hONQhQZClCl5lM4MwAzvCSt6ZA9njstzLl9THNad0KkoYuLdKbQXuJtjS_-I-Xd39ZbJhWZUylcRvwHso9qwesyOFWnGkcZazAc6emN-nQF4rwIc02PWQs0KQx2-sdFLwcSnSaW-mNktNfA1TSOX6K8p9RoWN1lGxjYZS1MtLLp7tmOfsrwgbm-eNJr75YWoK7AmIFwfwe7I3Odktvp3c0BtP1tzSel-6rpN7tbZU2v3f1XNPv2kcx6fymQ0DD4o1LsDDeykX1TJCmv75ZDGDui955UsvcbelGFRTm63CdM7p21RrbJUnTf2rUyEBn7I97_wli6Xe8ok81QXT8iT0ZPPS5GkLGh50vkJpnhYTPeECG2YH-qdIYaOKWgSbSS9RwvB6s1rHpc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost/stock-management-app/public/api/stores/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"stock-management-app",
+								"public",
+								"api",
+								"stores",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Stores",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiY2UzNDA1NTIxN2I0YTUwZmMzOGI1YjE4YjZiZDZkMWIyNzA1NTVhNzcxNDFjMzFmYWJiNWNjMDUwZjFlMGU4YTVhMDRhNjgxMWM3MjRlNDIiLCJpYXQiOjE3MzQ4NDk1ODcuMzEyMTYsIm5iZiI6MTczNDg0OTU4Ny4zMTIxNzUsImV4cCI6MTc2NjM4NTU4Ni44MDMyOTIsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.MelpeCuGe7j4qnTm3KlBhR0RIEyqivZEjyhfRSmV0d-5pEK-aJ20Rz1WmvuhlXN4huuMWc4Nlrg10Ni6h6BCpGNSyJf5uxee0bjxov-YhXPpqlwdFU_N0zyv4XgNrCLzP4JTp4FERFcW8SDmvrwRYLDn12g5M9Xymof0_viuJ1SYfzZI_ImCUQ-kOCFxlgpVaJaif1jkSOLyg3fBaxFJUAn980LF1iTtdPEAzxsMSxwgTxxqqgRELzooPhrdoA92uNBrK2b1PVASXcwtmRXtCUBZ4XwnEnAR2YTS_zgR-1KVM5lmUWEf_Y1Biilcx6XMy-hrghiygczk0Lq_95wjPujzR535cCJeDiJQhpuj40AdqUqqiHSmzgDzZFpwXXJqGzgkzpeir4kKjy177-YNEUydhyXafV-u-wWxRC7pVV4AqykX4fqhod5R0xGu57pJ9iUpk2F-f-e13XkFGBY_2OttPal7e7avY-fJclOKuedbMJ_74wmK1XKHc4JMP0uZXFX0vx7fZCMvcbclZ2kSXNF1ytKoouw1Z2t-5zx-QYEbHIvtiexYTtliGcwnVdCv7PsA27MQV83X2v__PaX-dKXZLzvazW8yo4-lqziOGMXN7gojrJCPtr4wfrVCt2sH3r6EBe1dmuSoylXO5HrmOQhMJbuaot5jnevHLmSPcRs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/stock-management-app/public/api/stores?page=1&pageSize=10&sort=store_id&direction=desc&search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"stock-management-app",
+								"public",
+								"api",
+								"stores"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "sort",
+									"value": "store_id"
+								},
+								{
+									"key": "direction",
+									"value": "desc"
+								},
+								{
+									"key": "search",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Active Stores",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiY2UzNDA1NTIxN2I0YTUwZmMzOGI1YjE4YjZiZDZkMWIyNzA1NTVhNzcxNDFjMzFmYWJiNWNjMDUwZjFlMGU4YTVhMDRhNjgxMWM3MjRlNDIiLCJpYXQiOjE3MzQ4NDk1ODcuMzEyMTYsIm5iZiI6MTczNDg0OTU4Ny4zMTIxNzUsImV4cCI6MTc2NjM4NTU4Ni44MDMyOTIsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.MelpeCuGe7j4qnTm3KlBhR0RIEyqivZEjyhfRSmV0d-5pEK-aJ20Rz1WmvuhlXN4huuMWc4Nlrg10Ni6h6BCpGNSyJf5uxee0bjxov-YhXPpqlwdFU_N0zyv4XgNrCLzP4JTp4FERFcW8SDmvrwRYLDn12g5M9Xymof0_viuJ1SYfzZI_ImCUQ-kOCFxlgpVaJaif1jkSOLyg3fBaxFJUAn980LF1iTtdPEAzxsMSxwgTxxqqgRELzooPhrdoA92uNBrK2b1PVASXcwtmRXtCUBZ4XwnEnAR2YTS_zgR-1KVM5lmUWEf_Y1Biilcx6XMy-hrghiygczk0Lq_95wjPujzR535cCJeDiJQhpuj40AdqUqqiHSmzgDzZFpwXXJqGzgkzpeir4kKjy177-YNEUydhyXafV-u-wWxRC7pVV4AqykX4fqhod5R0xGu57pJ9iUpk2F-f-e13XkFGBY_2OttPal7e7avY-fJclOKuedbMJ_74wmK1XKHc4JMP0uZXFX0vx7fZCMvcbclZ2kSXNF1ytKoouw1Z2t-5zx-QYEbHIvtiexYTtliGcwnVdCv7PsA27MQV83X2v__PaX-dKXZLzvazW8yo4-lqziOGMXN7gojrJCPtr4wfrVCt2sH3r6EBe1dmuSoylXO5HrmOQhMJbuaot5jnevHLmSPcRs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/stock-management-app/public/api/activestores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"stock-management-app",
+								"public",
+								"api",
+								"activestores"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Inventories",
+			"item": [
+				{
+					"name": "Inventory Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiNTJiNzY4ZWRmZjcxOTg1MDk1ZDRmNzVjZWJiMDBkZGNkNWRlZWIyMGViMjliMzczMmYxNmY1MDljNWIwMTFmZDdlOGIyNjY3M2Q2ZmZjNmQiLCJpYXQiOjE3MzQ3NTg1NDAuODA4Mzc1LCJuYmYiOjE3MzQ3NTg1NDAuODA4MzkxLCJleHAiOjE3NjYyOTQ1NDAuODAwMDQ5LCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.BhYLzbbZE-uA41tvf8l8Wsvq0AeF-RqYrM2ekQl8vSbMvDta63SjUoC2O5LOy73EchgFCQlni834a8exNwmYDXww1F8VAy4p11PIjzM1Fr8bQDhgDDFSgHqpwTT5oDyPm_HQXERo9tKUZ3nIn_mot2bUzVqLiOTBU_kKIUk-V6KloSksmEHYFSN17kHNIz-mnXdqQOpQi6h9IkB4-tQDoD4Zhd0FWuXmO55dxyElHGAW8qyk82Zm8wx12zxarIJNRMCqmjIiJDyxS8-aZQwXqKktyW0lpDg4hONQhQZClCl5lM4MwAzvCSt6ZA9njstzLl9THNad0KkoYuLdKbQXuJtjS_-I-Xd39ZbJhWZUylcRvwHso9qwesyOFWnGkcZazAc6emN-nQF4rwIc02PWQs0KQx2-sdFLwcSnSaW-mNktNfA1TSOX6K8p9RoWN1lGxjYZS1MtLLp7tmOfsrwgbm-eNJr75YWoK7AmIFwfwe7I3Odktvp3c0BtP1tzSel-6rpN7tbZU2v3f1XNPv2kcx6fymQ0DD4o1LsDDeykX1TJCmv75ZDGDui955UsvcbelGFRTm63CdM7p21RrbJUnTf2rUyEBn7I97_wli6Xe8ok81QXT8iT0ZPPS5GkLGh50vkJpnhYTPeECG2YH-qdIYaOKWgSbSS9RwvB6s1rHpc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost/stock-management-app/public/api/inventories/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"stock-management-app",
+								"public",
+								"api",
+								"inventories",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Inventories",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiY2UzNDA1NTIxN2I0YTUwZmMzOGI1YjE4YjZiZDZkMWIyNzA1NTVhNzcxNDFjMzFmYWJiNWNjMDUwZjFlMGU4YTVhMDRhNjgxMWM3MjRlNDIiLCJpYXQiOjE3MzQ4NDk1ODcuMzEyMTYsIm5iZiI6MTczNDg0OTU4Ny4zMTIxNzUsImV4cCI6MTc2NjM4NTU4Ni44MDMyOTIsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.MelpeCuGe7j4qnTm3KlBhR0RIEyqivZEjyhfRSmV0d-5pEK-aJ20Rz1WmvuhlXN4huuMWc4Nlrg10Ni6h6BCpGNSyJf5uxee0bjxov-YhXPpqlwdFU_N0zyv4XgNrCLzP4JTp4FERFcW8SDmvrwRYLDn12g5M9Xymof0_viuJ1SYfzZI_ImCUQ-kOCFxlgpVaJaif1jkSOLyg3fBaxFJUAn980LF1iTtdPEAzxsMSxwgTxxqqgRELzooPhrdoA92uNBrK2b1PVASXcwtmRXtCUBZ4XwnEnAR2YTS_zgR-1KVM5lmUWEf_Y1Biilcx6XMy-hrghiygczk0Lq_95wjPujzR535cCJeDiJQhpuj40AdqUqqiHSmzgDzZFpwXXJqGzgkzpeir4kKjy177-YNEUydhyXafV-u-wWxRC7pVV4AqykX4fqhod5R0xGu57pJ9iUpk2F-f-e13XkFGBY_2OttPal7e7avY-fJclOKuedbMJ_74wmK1XKHc4JMP0uZXFX0vx7fZCMvcbclZ2kSXNF1ytKoouw1Z2t-5zx-QYEbHIvtiexYTtliGcwnVdCv7PsA27MQV83X2v__PaX-dKXZLzvazW8yo4-lqziOGMXN7gojrJCPtr4wfrVCt2sH3r6EBe1dmuSoylXO5HrmOQhMJbuaot5jnevHLmSPcRs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/stock-management-app/public/api/inventories?page=1&pageSize=10&sort=inventory_item_id&direction=desc&search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"stock-management-app",
+								"public",
+								"api",
+								"inventories"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "sort",
+									"value": "inventory_item_id"
+								},
+								{
+									"key": "direction",
+									"value": "desc"
+								},
+								{
+									"key": "search",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Inventory Save",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiY2UzNDA1NTIxN2I0YTUwZmMzOGI1YjE4YjZiZDZkMWIyNzA1NTVhNzcxNDFjMzFmYWJiNWNjMDUwZjFlMGU4YTVhMDRhNjgxMWM3MjRlNDIiLCJpYXQiOjE3MzQ4NDk1ODcuMzEyMTYsIm5iZiI6MTczNDg0OTU4Ny4zMTIxNzUsImV4cCI6MTc2NjM4NTU4Ni44MDMyOTIsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.MelpeCuGe7j4qnTm3KlBhR0RIEyqivZEjyhfRSmV0d-5pEK-aJ20Rz1WmvuhlXN4huuMWc4Nlrg10Ni6h6BCpGNSyJf5uxee0bjxov-YhXPpqlwdFU_N0zyv4XgNrCLzP4JTp4FERFcW8SDmvrwRYLDn12g5M9Xymof0_viuJ1SYfzZI_ImCUQ-kOCFxlgpVaJaif1jkSOLyg3fBaxFJUAn980LF1iTtdPEAzxsMSxwgTxxqqgRELzooPhrdoA92uNBrK2b1PVASXcwtmRXtCUBZ4XwnEnAR2YTS_zgR-1KVM5lmUWEf_Y1Biilcx6XMy-hrghiygczk0Lq_95wjPujzR535cCJeDiJQhpuj40AdqUqqiHSmzgDzZFpwXXJqGzgkzpeir4kKjy177-YNEUydhyXafV-u-wWxRC7pVV4AqykX4fqhod5R0xGu57pJ9iUpk2F-f-e13XkFGBY_2OttPal7e7avY-fJclOKuedbMJ_74wmK1XKHc4JMP0uZXFX0vx7fZCMvcbclZ2kSXNF1ytKoouw1Z2t-5zx-QYEbHIvtiexYTtliGcwnVdCv7PsA27MQV83X2v__PaX-dKXZLzvazW8yo4-lqziOGMXN7gojrJCPtr4wfrVCt2sH3r6EBe1dmuSoylXO5HrmOQhMJbuaot5jnevHLmSPcRs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "inventory_item_code",
+									"value": "ITEM104",
+									"type": "text"
+								},
+								{
+									"key": "inventory_item_name",
+									"value": "Item One Zero Four",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "17",
+									"type": "text"
+								},
+								{
+									"key": "location",
+									"value": "Location VH",
+									"type": "text"
+								},
+								{
+									"key": "store_id",
+									"value": "9",
+									"type": "text"
+								},
+								{
+									"key": "in_stock_date",
+									"value": "2024-12-22",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/stock-management-app/public/api/inventories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"stock-management-app",
+								"public",
+								"api",
+								"inventories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Inventory Bulk Data Store",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMzVmMmZhNDk4NDJkMzBkMWE0ZmU0MjkxMzViMGUxNTYzY2RiNGExZTgxNmIwOGVjNTQxOTgwM2E5ZTZkZWQwNzE1MWI4MzNlM2JhMzA1YTgiLCJpYXQiOjE3MzQ4NjEwOTguOTcwNDIsIm5iZiI6MTczNDg2MTA5OC45NzA0NSwiZXhwIjoxNzY2Mzk3MDk4Ljk1Nzg0NCwic3ViIjoiMSIsInNjb3BlcyI6W119.Yu8zksIexK0-ApXh5Nbf8O1WVvbQExirs8drxTMtqkuFl32LFQb_o1Az3pBed7XNNYRRiaFq6f7U80yxvAHPh1lbNbeZP0kV5jiK5csv6PBh9bKv_7deLsDXxYIwDsYWxcw9rTLmMccFW0oMGTiQUAKWjDfy0bPgBWaKYVh5DN12Ll0kR7BKD1KG2xfaEdGbenVdIdQMqRV73OQ1ODdRmHfha_f4fMOXUrlYfQsbZ2zkEJpPHfiJ5pbgS4Qc87G_8YS3wRL2CMnkCKNPYiEw1BRtbS9LACoyhi0k-2_N3JJ5RiRV4C3xYuyPaRSc0f777FXhxHDGDBsonq_N_bsXck_JxUnbu-_gV1xa0IncyDpPhGebtCcsrodS3M5_AJto9FYnZza8zjEnH998LAGMNNKrqs2JwT9fXLZPBQpefBMXuvH7xOgMoaWFnRFwNWKV879Y6ngLBpkrWIqU1vp7zSchEpHJ1bulJZBeZfPChFG5CbKQhnoHiVP7mcmHDtkmiPXLNq2IUKDUqVY3o66VRpxcJl6E1QrNh-jgRq6UkpaoEHt6AhxzrsuVh4lcj1DT3rMY6uTKNBU0dZUu2k1Hws8FKnWqQXw3scfJT2Ri-RqPYFiupM5EnSyqZterFaohVBJeAg4MNhLtJjv3dVk3ZcxhHlxUDrJoPwvTZ32Lc6Q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"inventory_items\": [\r\n        {\r\n            \"inventory_item_code\": \"ITEM101\",\r\n            \"inventory_item_name\": \"Item One Zero One\",\r\n            \"quantity\": 100,\r\n            \"location\": \"Aisle 1\",\r\n            \"store_id\": 1,\r\n            \"in_stock_date\": \"2024-12-22\",\r\n            \"status\": 1\r\n        },\r\n        {\r\n            \"inventory_item_code\": \"ITEM102\",\r\n            \"inventory_item_name\": \"Item One Zero Two\",\r\n            \"quantity\": 50,\r\n            \"location\": \"Aisle 2\",\r\n            \"store_id\": 2,\r\n            \"in_stock_date\": \"2024-12-22\",\r\n            \"status\": 1\r\n        },\r\n        {\r\n            \"inventory_item_code\": \"ITEM103\",\r\n            \"inventory_item_name\": \"Item One Zero One\",\r\n            \"quantity\": 75,\r\n            \"location\": \"Aisle 3\",\r\n            \"store_id\": 3,\r\n            \"in_stock_date\": \"2024-12-22\",\r\n            \"status\": 1\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/stock-management-app/public/api/inventories-bulk-store",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"stock-management-app",
+								"public",
+								"api",
+								"inventories-bulk-store"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login/Logout & Register",
+			"item": [
+				{
+					"name": "Logout API",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiMzU1YTlmMTM5NWNkMzJjMmYyZTY1YjBiMjg1ZmVjM2VmYWUxOGViYzNhMjY5ZjlmNTFmYWY5MDU4YWQwNjQ2ZjFhOTdiOGZlYjkxMzc2MDUiLCJpYXQiOjE3MzQ3NTU0OTIuMTY0NDMxLCJuYmYiOjE3MzQ3NTU0OTIuMTY0NDM4LCJleHAiOjE3NjYyOTE0OTIuMTUwNjM3LCJzdWIiOiI0Iiwic2NvcGVzIjpbXX0.FzHmzDWfB0oI7HOVhZOXRgFBmeHIDqv18oXHk5-jn0NgbWh3w97mC7hL27rs3gT0TsP3t56DIe4VVFKd8vTN7iIbCMza1817syIkCDkUQH8Ck_kADRr_-2YqWWDDhJ_VuScfSHnM7aRm0ZLnNoJtc6R0ml7FQ5zu1h0JcAXgA0RxLtZK7taDSa5VP9UiuVUt7vKGb8FIe42NCcWPWXWOA_VFBRw8MVgiaQ7qR-qRA25BCMCK0SLYiQksVdn_TWgjQ8JNPu49HWmNMU5xx2p28Wa9lsTL1-N1Lh6eUX_bpnTTJVGZE1UAJI6Aro70JxooQC4kLeKDqhMV1zMpUqxFq0qSqevLq7TJdDyhITnYyDTfthysQjXqDPFPOTyxPfiztfIkWcajy-qJ4jRaVNg-iaWYzYayF7gIdN6UKmqhCawB7cLhli0hsLbX2EOjOCpg0B9vkS9PAqdpD0sD_lug5XQ2tcN2PfNmopJx1wDGtGeAsrv6KRVe-ClpFUtDhZh54BPAHvsONhHRRnpyX9nHyNSx0pmSfrC7ETfusHxbfNW_aDCyXCwssuZYyvY2_9UGWrSLMm7Nm2BerqbyH9VlNi1kst1gJCmhnsvAfOZL3wcEAzirqEKgtXe7MJib21-Gy6HYDeLAFjp-JdX9BaBIul7G4QSBlvmU-7Irt5hyat8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/stock-management-app/public/api/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"stock-management-app",
+								"public",
+								"api",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New User Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "User 11",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "user11@yopmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password123",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "password123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/stock-management-app/public/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"stock-management-app",
+								"public",
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login API",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "user1@yopmail.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "password123",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/stock-management-app/public/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"stock-management-app",
+								"public",
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get User Detail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMzVmMmZhNDk4NDJkMzBkMWE0ZmU0MjkxMzViMGUxNTYzY2RiNGExZTgxNmIwOGVjNTQxOTgwM2E5ZTZkZWQwNzE1MWI4MzNlM2JhMzA1YTgiLCJpYXQiOjE3MzQ4NjEwOTguOTcwNDIsIm5iZiI6MTczNDg2MTA5OC45NzA0NSwiZXhwIjoxNzY2Mzk3MDk4Ljk1Nzg0NCwic3ViIjoiMSIsInNjb3BlcyI6W119.Yu8zksIexK0-ApXh5Nbf8O1WVvbQExirs8drxTMtqkuFl32LFQb_o1Az3pBed7XNNYRRiaFq6f7U80yxvAHPh1lbNbeZP0kV5jiK5csv6PBh9bKv_7deLsDXxYIwDsYWxcw9rTLmMccFW0oMGTiQUAKWjDfy0bPgBWaKYVh5DN12Ll0kR7BKD1KG2xfaEdGbenVdIdQMqRV73OQ1ODdRmHfha_f4fMOXUrlYfQsbZ2zkEJpPHfiJ5pbgS4Qc87G_8YS3wRL2CMnkCKNPYiEw1BRtbS9LACoyhi0k-2_N3JJ5RiRV4C3xYuyPaRSc0f777FXhxHDGDBsonq_N_bsXck_JxUnbu-_gV1xa0IncyDpPhGebtCcsrodS3M5_AJto9FYnZza8zjEnH998LAGMNNKrqs2JwT9fXLZPBQpefBMXuvH7xOgMoaWFnRFwNWKV879Y6ngLBpkrWIqU1vp7zSchEpHJ1bulJZBeZfPChFG5CbKQhnoHiVP7mcmHDtkmiPXLNq2IUKDUqVY3o66VRpxcJl6E1QrNh-jgRq6UkpaoEHt6AhxzrsuVh4lcj1DT3rMY6uTKNBU0dZUu2k1Hws8FKnWqQXw3scfJT2Ri-RqPYFiupM5EnSyqZterFaohVBJeAg4MNhLtJjv3dVk3ZcxhHlxUDrJoPwvTZ32Lc6Q",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/stock-management-app/public/api/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"stock-management-app",
+								"public",
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User Detail",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiNTJiNzY4ZWRmZjcxOTg1MDk1ZDRmNzVjZWJiMDBkZGNkNWRlZWIyMGViMjliMzczMmYxNmY1MDljNWIwMTFmZDdlOGIyNjY3M2Q2ZmZjNmQiLCJpYXQiOjE3MzQ3NTg1NDAuODA4Mzc1LCJuYmYiOjE3MzQ3NTg1NDAuODA4MzkxLCJleHAiOjE3NjYyOTQ1NDAuODAwMDQ5LCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.BhYLzbbZE-uA41tvf8l8Wsvq0AeF-RqYrM2ekQl8vSbMvDta63SjUoC2O5LOy73EchgFCQlni834a8exNwmYDXww1F8VAy4p11PIjzM1Fr8bQDhgDDFSgHqpwTT5oDyPm_HQXERo9tKUZ3nIn_mot2bUzVqLiOTBU_kKIUk-V6KloSksmEHYFSN17kHNIz-mnXdqQOpQi6h9IkB4-tQDoD4Zhd0FWuXmO55dxyElHGAW8qyk82Zm8wx12zxarIJNRMCqmjIiJDyxS8-aZQwXqKktyW0lpDg4hONQhQZClCl5lM4MwAzvCSt6ZA9njstzLl9THNad0KkoYuLdKbQXuJtjS_-I-Xd39ZbJhWZUylcRvwHso9qwesyOFWnGkcZazAc6emN-nQF4rwIc02PWQs0KQx2-sdFLwcSnSaW-mNktNfA1TSOX6K8p9RoWN1lGxjYZS1MtLLp7tmOfsrwgbm-eNJr75YWoK7AmIFwfwe7I3Odktvp3c0BtP1tzSel-6rpN7tbZU2v3f1XNPv2kcx6fymQ0DD4o1LsDDeykX1TJCmv75ZDGDui955UsvcbelGFRTm63CdM7p21RrbJUnTf2rUyEBn7I97_wli6Xe8ok81QXT8iT0ZPPS5GkLGh50vkJpnhYTPeECG2YH-qdIYaOKWgSbSS9RwvB6s1rHpc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/stock-management-app/public/api/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"stock-management-app",
+								"public",
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
